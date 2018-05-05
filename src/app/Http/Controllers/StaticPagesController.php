@@ -9,21 +9,18 @@ use App\Http\Requests;
 class StaticPagesController extends Controller
 {
     //
-    public function home(Request $request)
+    public function home()
     {
-        return response()->json($request->server());
+        return view('static_pages/home');
     }
 
-    public function help(Request $request)
+    public function help()
     {
-        return response()->json([
-            'server'=>$request->server(),
-            'path'=>$request->path()
-        ]);
+        return view('static_pages/help');
     }
 
-    public function about(Request $request)
+    public function about()
     {
-        return response()->json($request->server());
+        return view('static_pages/about');
     }
 }
