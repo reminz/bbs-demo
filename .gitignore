@@ -4,3 +4,4 @@ misc/database/*
 .idea/*
 src/public/css/*
 src/public/fonts/*
+src/public/js/*
