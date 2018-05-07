@@ -3,4 +3,5 @@ misc/php-conf/*
 misc/database/*
 .idea/*
 src/public/css/*
+src/public/js/*
 src/public/fonts/*
