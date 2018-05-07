@@ -14,5 +14,8 @@
         @include('layouts._footer')
       </div>
     </div>
+
+    <script src="/js/app.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js"></script>
   </body>
 </html>
