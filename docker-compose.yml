@@ -18,6 +18,12 @@ services:
     environment:
     - APP_ENV=develop
     - APP_DEBUG="true"
+    - DB_CONNECTION=mysql
+    - DB_HOST=db
+    - DB_PORT=3306
+    - DB_DATABASE=sampleapp
+    - DB_USERNAME=root
+    - DB_PASSWORD=root
   db:
     image: mysql:5.6
     restart: always
