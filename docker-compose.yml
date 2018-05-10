@@ -5,7 +5,7 @@ services:
     volumes_from:
       - phpfpm
     volumes:
-      - ./misc/nginx-conf:/etc/nginx
+      - ./misc/nginx-conf/conf.d/default.conf:/etc/nginx/conf.d/default.conf
       - ./misc/nginx-log:/var/log/nginx
     ports:
       - "8080:80"
