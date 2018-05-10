@@ -25,16 +25,13 @@ class UsersController extends Controller
 
     public function show(User $users)
     {
-        // $user = User::findOrFail($users);
-        // var_dump($users);
-//         $user = User::first();
-        // var_dump(config('database.connections.mysql'));
-        // var_dump($user->name);
-        // var_dump(compact('user'));
-        // $this->authorize('show', $users);
         $this->authorize($users);
         $user = $users;
-        return view('users.show', compact('user'));
+        $statuses = $user->statuses()
+                            ->orderBy('created_at', 'desc')
+                            ->paginate(30);
+                            
+        return view('users.show', compact('user', 'statuses'));
     }
 
     public function store(Request $request)
