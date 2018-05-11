@@ -25,16 +25,18 @@ $ cd bbs-demo
 $ docker-compose up
 ```
 
-浏览器访问[sampleapp主页](127.0.0.1:8080)。
+浏览器访问[sampleapp主页](http://127.0.0.1:8080)。
 
 ![Alt text](home.png)
 
 # 附加说明
 ### 环境变量
 
-       laravel框架会先尝试读取系统的环境变量，之后再尝试.env文件定义的环境变量。docker只为laravel的http请求提供运行环境，命令行操作是在电脑上执行的。因此，在docker-compos.yaml文件里面定义的env是为http请求提供的，.env定义的变量是为laravel artisan 提供的，两者的作用范围是有差异的。
-       因此在docker-compose.yaml里dbhost为“db”(即docker-compose文件定义的service：db),dbport为3306。
-       而.env内的dbhost为127.0.0.1，dbport为3307，因为docker将创建的db service端口3306映射到本地电脑的3307端口。
+laravel框架会先尝试读取系统的环境变量，之后再尝试.env文件定义的环境变量。docker只为laravel的http请求提供运行环境，命令行操作是在电脑上执行的。因此，在docker-compos.yaml文件里面定义的env是为http请求提供的，.env定义的变量是为laravel artisan 提供的，两者的作用范围是有差异的。
+
+因此在docker-compose.yaml里dbhost为“db”(即docker-compose文件定义的service：db),dbport为3306。
+
+而.env内的dbhost为127.0.0.1，dbport为3307，因为docker将创建的db service端口3306映射到本地电脑的3307端口。
 
 ### 创建数据库
 
