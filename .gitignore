@@ -1,5 +1,4 @@
 misc/nginx-log/*
-misc/php-conf/*
 misc/database/*
 .idea/*
 src/public/css/*
