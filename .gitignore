@@ -1,5 +1,3 @@
-misc/nginx-log/*
-misc/database/*
 .idea/*
 src/public/css/*
 src/public/fonts/*
